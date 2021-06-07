@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 12:03:52 by smagdela          #+#    #+#             */
-/*   Updated: 2021/06/07 17:42:11 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/06/07 19:25:59 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_endofline(int read_buffer, char *buffer)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (i < read_buffer)
