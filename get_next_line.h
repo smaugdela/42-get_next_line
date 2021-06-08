@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 12:03:32 by smagdela          #+#    #+#             */
-/*   Updated: 2021/06/08 13:57:29 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/06/08 15:18:08 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int 	get_next_line(int fd, char **line);
 int		ft_endofline(int read_buffer, char *buffer);
 size_t	ft_strlen (const char *str);
 char	*ft_strjoin(char const *s1, char const *s2);
+int		ft_error(char *line, char *tmp_line);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 #endif
