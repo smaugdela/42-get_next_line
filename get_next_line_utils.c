@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 12:03:52 by smagdela          #+#    #+#             */
-/*   Updated: 2021/06/08 15:31:14 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/06/08 18:51:47 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ size_t	ft_strlen (const char *str)
 	return (i);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin_gnl(char const *s1, char const *s2)
 {
 	char			*big_s;
 	unsigned int	i;
@@ -54,7 +54,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		++i;
 	}
 	j = 0;
-	while (s2[j])
+	while (s2[j] && s2[j] != '\n')
 	{
 		big_s[i + j] = s2[j];
 		++j;
@@ -72,7 +72,7 @@ int	ft_error(char *line, char *tmp_line)
 	return (-1);
 }
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy_gnl(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	len;
@@ -90,4 +90,22 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	dst[i] = '\0';
 	return (len);
+}
+
+char	*ft_strdup(const char *str)
+{
+	char	*dest;
+	size_t	i;
+
+	dest = (char *)malloc(ft_strlen(str) + 1);
+	if (!dest)
+		return (NULL);
+	i = 0;
+	while (*(str + i))
+	{
+		*(dest + i) = *(str + i);
+		++i;
+	}
+	*(dest + i) = '\0';
+	return (dest);
 }
