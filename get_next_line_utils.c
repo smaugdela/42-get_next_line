@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 12:03:52 by smagdela          #+#    #+#             */
-/*   Updated: 2021/06/09 15:16:22 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/06/09 17:10:42 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,15 +61,6 @@ char	*ft_strjoin_gnl(char const *s1, char const *s2)
 	}
 	big_s[i + j] = '\0';
 	return (big_s);
-}
-
-int	ft_error(char *line, char *tmp_line)
-{
-	if (line)
-		free(line);
-	if (tmp_line)
-		free(tmp_line);
-	return (-1);
 }
 
 size_t	ft_strlcpy_gnl(char *dst, const char *src, size_t dstsize)
