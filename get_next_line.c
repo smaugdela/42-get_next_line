@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 12:03:19 by smagdela          #+#    #+#             */
-/*   Updated: 2021/06/09 17:29:52 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/06/09 18:21:33 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int get_next_line(int fd, char **line)
 	if (tmp_line == NULL)
 		return (-1);
 	*tmp_line = '\0';
-	if (ft_strlen(buffer) <= BUFFER_SIZE && ft_strlen(buffer) != 0) // si il y a eu du debordement a la lecture de la precedente ligne (mais que l'on est pas a la premiere lecture), on actualise la restante taille du buffer
+	if (ft_strlen(buffer) <= BUFFER_SIZE && ft_strlen(buffer) != 0) // si il y a eu du debordement a la lecture de la precedente ligne.
 		read_buffer = BUFFER_SIZE;
 	else // seulement si il n'y a pas de debordement, on lit le fichier.
 		read_buffer = read(fd, buffer, BUFFER_SIZE);
@@ -46,6 +46,7 @@ int get_next_line(int fd, char **line)
 	if (read_buffer == -1) // si une erreur survient, on free.
 	{
 		free(*line);
+		*line = NULL;
 		free(tmp_line);
 		return (-1);
 	}
