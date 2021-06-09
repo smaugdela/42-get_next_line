@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 12:03:32 by smagdela          #+#    #+#             */
-/*   Updated: 2021/06/09 18:21:37 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/06/09 18:49:49 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-#include <stdio.h> // ATTENTION /!\ retirer cet include
-
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 4096
 # endif
 
-int 	get_next_line(int fd, char **line);
+int		get_next_line(int fd, char **line);
 int		ft_endofline(int read_buffer, char *buffer);
 size_t	ft_strlen (const char *str);
 char	*ft_strjoin_gnl(char const *s1, char const *s2);

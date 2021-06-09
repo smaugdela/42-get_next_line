@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 12:03:19 by smagdela          #+#    #+#             */
-/*   Updated: 2021/06/09 18:21:33 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/06/09 18:49:55 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int get_next_line(int fd, char **line)
 	char 			*tmp_line;
 	int				i;
 
+	if (BUFFER_SIZE < 1)
+		return (-1);
 	*line = (char *)malloc(1);
 	if (*line == NULL)
 		return (-1);
