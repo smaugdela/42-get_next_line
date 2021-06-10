@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/07 12:03:19 by smagdela          #+#    #+#             */
-/*   Updated: 2021/06/10 19:03:37 by smagdela         ###   ########.fr       */
+/*   Created: 2021/06/10 18:57:50 by smagdela          #+#    #+#             */
+/*   Updated: 2021/06/10 19:03:35 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 /* Je dedie cette fonction a Anna, 
 sans qui elle n'aurait jamais pu voir le jour, 
