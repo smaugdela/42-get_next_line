@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 18:57:50 by smagdela          #+#    #+#             */
-/*   Updated: 2021/06/10 19:03:35 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/06/10 19:48:19 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,8 @@ int	get_next_line(int fd, char **line)
 	static char		buffer[1024][BUFFER_SIZE + 1];
 	int				read_buffer;
 
-	if (BUFFER_SIZE < 1 || fd < 0)
+	read_buffer = read(fd, buffer[fd], 0);
+	if (BUFFER_SIZE < 1 || fd < 0 || !line || read_buffer == -1)
 		return (-1);
 	*line = (char *)malloc(1);
 	if (*line == NULL)
