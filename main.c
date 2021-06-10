@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 15:35:08 by smagdela          #+#    #+#             */
-/*   Updated: 2021/06/09 18:49:50 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/06/10 16:00:59 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(void)
 	int		i;
 	char	*line;
 
-	fd = open("file.txt", O_RDONLY);
+	fd = open("41_no_nl", O_RDONLY);
 	i = 1;
 
 	while (get_next_line(fd, &line) > 0)
