@@ -12,10 +12,6 @@
 
 #include "get_next_line.h"
 
-/* Je dedie cette fonction a Anna, 
-sans qui elle n'aurait jamais pu voir le jour, 
-et ainsi faire de moi un homme heureux <3 */
-
 static int	ft_append(char **line, char *buffer)
 {
 	char	*tmp_line;
