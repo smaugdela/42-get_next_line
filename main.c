@@ -13,6 +13,7 @@
 #include "get_next_line.h"
 #include <stdio.h>
 #include <fcntl.h>
+#include <stdlib.h>
 
 int main(void)
 {
@@ -26,6 +27,7 @@ int main(void)
 	while (get_next_line(0, &line) > 0)
 	{
 		printf("Ligne %d : |%s|\n", i, line);
+		free(line);
 		++i;
 	}
 	printf("Ligne %d : |%s|\n", i, line);
